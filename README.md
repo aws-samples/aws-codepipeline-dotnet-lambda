@@ -102,7 +102,7 @@ The updated aws-lambda-tools-defaults.json should look like below.
   "function-memory-size": 256,
   "function-timeout": 30,
   "function-handler": "Dotnetlambda4::Dotnetlambda4.Function::FunctionHandler",
-  "function-role": "arn:aws:iam::065770805525:role/Sundarfulllambdarole"
+  "function-role": "arn:aws:iam::yourawsaccountnumber:role/Sundarfulllambdarole"
 }
 
 
@@ -353,7 +353,7 @@ phases:
       - dotnet new -i Amazon.Lambda.Templates::*
       - dotnet tool install -g Amazon.Lambda.Tools
       - dotnet tool update -g Amazon.Lambda.Tools
-      - dotnet lambda deploy-function "Dotnetlambda4" –-function-role "arn:aws:iam::065770805525:role/Sundarfulllambdarole"
+      - dotnet lambda deploy-function "Dotnetlambda4" –-function-role "arn:aws:iam::yourawsaccountnumber:role/Sundarfulllambdarole"
 
 ```
 
