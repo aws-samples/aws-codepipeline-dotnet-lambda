@@ -74,7 +74,7 @@ Open the default aws-lambda-tools-defaults.json created with Visual Studio Proje
   "function-runtime":"dotnetcore2.1",
   "function-memory-size" : 256,
   "function-timeout" : 30,
-  "function-handler" : "Dotnetlambda3::Dotnetlambda3.Function::FunctionHandler"
+  "function-handler" : "Dotnetlambda4::Dotnetlambda4.Function::FunctionHandler"
 }
 
 ``` 
@@ -101,7 +101,7 @@ The updated aws-lambda-tools-defaults.json should look like below.
   "function-runtime": "dotnetcore2.1",
   "function-memory-size": 256,
   "function-timeout": 30,
-  "function-handler": "Dotnetlambda3::Dotnetlambda3.Function::FunctionHandler",
+  "function-handler": "Dotnetlambda4::Dotnetlambda4.Function::FunctionHandler",
   "function-role": "arn:aws:iam::065770805525:role/Sundarfulllambdarole"
 }
 
@@ -126,8 +126,8 @@ phases:
       - aws configure set aws_access_key_id $AccessKeyId
       - aws configure set aws_secret_access_key $SecretAccessKey
       - aws s3 ls
-      - cd Dotnetlambda3
-      - cd Dotnetlambda3
+      - cd Dotnetlambda4
+      - cd Dotnetlambda4
       - dotnet clean
       - dotnet restore
       
@@ -137,7 +137,7 @@ phases:
       - dotnet new -i Amazon.Lambda.Templates::*
       - dotnet tool install -g Amazon.Lambda.Tools
       - dotnet tool update -g Amazon.Lambda.Tools
-      - dotnet lambda deploy-function "Dotnetlambda3" –-function-role "arn:aws:iam::awsaccountno:role/IAMrole"
+      - dotnet lambda deploy-function "Dotnetlambda4" –-function-role "arn:aws:iam::awsaccountno:role/IAMrole"
 
 
 ``` 
