@@ -10,7 +10,7 @@ there are couple of options available. The option #1 is to leverage Visual Studi
 ## 2. AWS CodePipeline for Dotnet Lambda functions created using Visual Studio
 The following forms the pre-requisite in the windows environment.
 - Windows 10 with lates updates.
-- Visual Studio 2017 with latest updates.
+- Visual Studio 2017 (or) 2019 with latest updates.
 - AWS toolkit for Visual Studio 2017.
 - Windows subsytem for Linux.
 
