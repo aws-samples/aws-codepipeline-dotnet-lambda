@@ -336,31 +336,37 @@ Add buildspec.yml at the root of the AWS CodeCommit repository. I mean, add it t
 
 ``` json
 version: 0.2
+env:
+  variables:
+    DOTNET_ROOT: /root/.dotnet
+  secrets-manager:
+    AWS_ACCESS_KEY_ID_PARAM: CodeBuild:AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY_PARAM: CodeBuild:AWS_SECRET_ACCESS_KEY
 phases:
+  install:
+    runtime-versions:
+      dotnet: 3.1
   pre_build:
     commands:
       - echo Restore started on `date`
+      - export PATH="$PATH:/root/.dotnet/tools"
       - pip install --upgrade awscli
-      - echo "Configuring AWS credentials"
       - aws configure set profile $Profile
       - aws configure set region $Region
-      - aws configure set aws_access_key_id $AccessKeyId
-      - aws configure set aws_secret_access_key $SecretAccessKey
-      - aws s3 ls
+      - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID_PARAM
+      - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY_PARAM
       - cd Dotnetlambda4
       - cd src
       - cd Dotnetlambda4
-      - dotnet clean
+      - dotnet clean 
       - dotnet restore
-      
   build:
     commands:
       - echo Build started on `date`
       - dotnet new -i Amazon.Lambda.Templates::*
       - dotnet tool install -g Amazon.Lambda.Tools
       - dotnet tool update -g Amazon.Lambda.Tools
-      - dotnet lambda deploy-function "Dotnetlambda4" –-function-role "arn:aws:iam::yourawsaccountnumber:role/Sundarfulllambdarole"
-
+      - dotnet lambda deploy-function "Dotnetlambda4" --function-role "arn:aws:iam::065770805525:role/Sundarfulllambdarole" --region "us-east-1"
 ```
 
 ## 3e. Push to AWS CodeCommit repository
