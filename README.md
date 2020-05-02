@@ -246,8 +246,8 @@ This completes the section 2.
 In this section, i'll cover how to setup an AWS CodePipeline for Lambda functions created using 'AWS Dotnet Lambda CLI'. This will be useful for MacOS and Linux environments.
 
 Here is the typical development environment that you will need.
-- Mac OS lates version or Linux (supported distros for .NET core 2.1) with latest updates. 
-- .NET Core 2.1 or higher.
+- Mac OS lates version or Linux (supported distros for .NET core 3.1) with latest updates. 
+- .NET Core 3.1 or higher.
 - AWS CLI
 - AWS Dotnet Lambda CLI
 
