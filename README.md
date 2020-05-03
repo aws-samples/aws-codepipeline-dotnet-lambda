@@ -253,7 +253,7 @@ Configure  AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY and its associated values.
 Select 'DefaultEncryptionKey' for the encryption key. Click Next and name the 'Secret name' as CodeBuild.
 
 <p align="right">
-<img src="/images/pic20.JPG">
+<img src="/images/pic20.jpg">
 </p>
 
 
