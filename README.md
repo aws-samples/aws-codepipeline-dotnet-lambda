@@ -229,7 +229,7 @@ Navigate to AWS Secrets Manager --> Store a new secret --> Select other types of
 Configure  AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY and its associated values.
 
 <p align="center">
-<img src="/images/pic19.JPG">
+<img src="/images/pic19.jpg">
 </p>
 
 
@@ -246,7 +246,7 @@ Leave the rest of selections as default and finally proceed to store the secret.
 
 
 <p align="center">
-<img src="/images/pic20.JPG">
+<img src="/images/pic21.JPG">
 </p>
 
 
