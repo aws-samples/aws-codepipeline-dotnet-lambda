@@ -145,7 +145,7 @@ phases:
       - dotnet new -i Amazon.Lambda.Templates::*
       - dotnet tool install -g Amazon.Lambda.Tools
       - dotnet tool update -g Amazon.Lambda.Tools
-      - dotnet lambda deploy-function "Dotnetlambda4" --function-role "arn:aws:iam::065770805525:role/Sundarfulllambdarole" --region "us-east-1"
+      - dotnet lambda deploy-function "Dotnetlambda4" --function-role "arn:aws:iam::yourawsaccountnumber:role/Sundarfulllambdarole" --region "us-east-1"
 ``` 
 
 ## 2d. Push to AWS CodeCommit repository
@@ -366,7 +366,7 @@ phases:
       - dotnet new -i Amazon.Lambda.Templates::*
       - dotnet tool install -g Amazon.Lambda.Tools
       - dotnet tool update -g Amazon.Lambda.Tools
-      - dotnet lambda deploy-function "Dotnetlambda4" --function-role "arn:aws:iam::065770805525:role/Sundarfulllambdarole" --region "us-east-1"
+      - dotnet lambda deploy-function "Dotnetlambda4" --function-role "arn:aws:iam::yourawsaccountnumber:role/Sundarfulllambdarole" --region "us-east-1"
 ```
 
 ## 3e. Push to AWS CodeCommit repository
