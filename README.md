@@ -170,39 +170,48 @@ git push
 
 Proceed to define AWS CodePipeline for deploying Lambda functions.
 
+<p></p>
+<p></p>
 Name the Pipeline with any arbitrary name.
 
 <p align="right">
 <img src="/images/pic5.JPG">
 </p>
 
+<p></p>
+<p></p>
 Select 'AWS CodeCommit' as SourceProvider and also pick the right repository and branch.
 
 <p align="right">
 <img src="/images/pic6.JPG">
 </p>
 
-
+<p></p>
+<p></p>
 Select 'AWS CodeBuild' as Build provider.
 
 <p align="right">
 <img src="/images/pic7.JPG">
 </p>
 
-
+<p></p>
+<p></p>
 Proceed to create a new CodeBuild project. Name the project with any arbitrary name. For Environment select 'Managed Image' as Environment Image and 'Ubuntu' as operating system.
 
 <p align="right">
 <img src="/images/pic8.JPG">
 </p>
 
-
+<p></p>
+<p></p>
 Select 'aws/codebuild/standard:4.0' as Image and 'Always use the latest image for this runtime version' for Image version.
 
  <p align="right">
 <img src="/images/pic9.JPG">
 </p>
 
+<p></p>
+<p></p>
 Now you can see the successful creation of AWS CodeBuild project.
 
 <p align="right">
@@ -210,30 +219,37 @@ Now you can see the successful creation of AWS CodeBuild project.
 </p>
 
 
-
+<p></p>
+<p></p>
 Proceed to define these four environment variables Profile, Region,  and SecretAccessKey in the CodeBuild environment settings.
 
 <p align="right">
 <img src="/images/pic12.JPG">
 </p>
 
-
+<p></p>
+<p></p>
 To configure AWS CLI on the CodeBuild environment the parameters such as Region, Profile, AccessKeyId and SecretAccessKey need to be configure.
 The Region and Profile can be configured as part of environment variables in CodeBuild. The AccessKeyId and SecretAccessKey needs to be configured in AWS SecretsManager.
 
+<p></p>
+<p></p>
 Navigate to AWS Secrets Manager --> Store a new secret --> Select other types of secrets (API Key).
 
 <p align="right">
 <img src="/images/pic18.JPG">
 </p>
 
+<p></p>
+<p></p>
 Configure  AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY and its associated values.
 
 <p align="right">
 <img src="/images/pic19.jpg">
 </p>
 
-
+<p></p>
+<p></p>
 Select 'DefaultEncryptionKey' for the encryption key. Click Next and name the 'Secret name' as CodeBuild.
 
 <p align="right">
@@ -241,14 +257,16 @@ Select 'DefaultEncryptionKey' for the encryption key. Click Next and name the 'S
 </p>
 <p>
 
+<p></p>
+<p></p>
 Leave the rest of selections as default and finally proceed to store the secret.
 <p align="right">
 <img src="/images/pic21.JPG">
 </p>
 
 
-<p>
-
+<p></p>
+<p></p>
 The CodeDeploy is an optional stage in the AWS CodePipeline. Skip this to complete the creation of the AWS CodePipeline.
 
 <p align="right">
@@ -268,6 +286,8 @@ The following things need to be ensured for the successful CodeBuild exectuion.
 ## 2g. Completion and Verification
 
 Save the creation of AWS CodePipeline. Push the code changes of Lambda function from local repository to remote AWS CodeCommit repository.
+<p></p>
+<p></p>
 After few seconds, you should see the trigger of AWS CodeCommit stage and transition to AWS CodeBuild stage. Then AWS Code Pipeline should complete successfully after few minutes.
 
 <p align="right">
@@ -275,6 +295,8 @@ After few seconds, you should see the trigger of AWS CodeCommit stage and transi
 </p>
 
 
+<p></p>
+<p></p>
 You can also see the successful creation of AWS Lambda function from AWS Code Pipeline.
 
 <p align="right">
@@ -293,6 +315,7 @@ Here is the typical development environment that you will need.
 - AWS Dotnet Lambda CLI
 
 ## 3a. Create an AWS CodeCommit repository
+
 Create an AWS CodeCommit repositry in the console.
 
 <p align="right">
@@ -319,6 +342,8 @@ dotnet new -all
 
 ```
 
+<p></p>
+<p></p>
 You should see the following output and many more .NET core template types listed there.
 
 
