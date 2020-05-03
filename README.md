@@ -274,6 +274,7 @@ The CodeDeploy is an optional stage in the AWS CodePipeline. Skip this to comple
 
 
 ## 2f. Configuration for successful CodePipeline
+<br>
 
 The following things need to be ensured for the successful CodeBuild exectuion.
 
@@ -285,8 +286,8 @@ The following things need to be ensured for the successful CodeBuild exectuion.
 ## 2g. Completion and Verification
 
 Save the creation of AWS CodePipeline. Push the code changes of Lambda function from local repository to remote AWS CodeCommit repository.
-<p></p>
-<p></p>
+<br>
+
 After few seconds, you should see the trigger of AWS CodeCommit stage and transition to AWS CodeBuild stage. Then AWS Code Pipeline should complete successfully after few minutes.
 
 <p align="right">
@@ -294,18 +295,20 @@ After few seconds, you should see the trigger of AWS CodeCommit stage and transi
 </p>
 
 
-<p></p>
-<p></p>
+<br>
+
 You can also see the successful creation of AWS Lambda function from AWS Code Pipeline.
 
 <p align="right">
 <img src="/images/pic16.JPG">
 </p>
+<br>
 
 This completes the section 2.
 
 ## 3. AWS CodePipeline for Dotnet Lambda function created in Visual Studio
 In this section, i'll cover how to setup an AWS CodePipeline for Lambda functions created using 'AWS Dotnet Lambda CLI'. This will be useful for MacOS and Linux environments.
+<br>
 
 Here is the typical development environment that you will need.
 - Mac OS lates version or Linux (supported distros for .NET core 3.1) with latest updates. 
@@ -320,6 +323,7 @@ Create an AWS CodeCommit repositry in the console.
 <p align="right">
 <img src="/images/pic14.JPG">
 </p>
+<br>
 
 Clone the repository locally using Git credentials.
 
@@ -341,8 +345,8 @@ dotnet new -all
 
 ```
 
-<p></p>
-<p></p>
+<br>
+
 You should see the following output and many more .NET core template types listed there.
 
 
