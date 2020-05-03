@@ -4,7 +4,8 @@ As enterprises start to embrace serverless paradigm (AWS Lambda), there is an in
 
 
 When it comes to creating and deploying AWS Lambda functions in .NET core,
-there are couple of options available. The option #1 is to leverage Visual Studio 2019. Then, the  option #2 is to leverage AWS Lambda Dotnet CLI. This post will cover how to set up an automated AWS CodePipeline for both the options. The detailed steps for creating AWS CodePipeline for option #1 is covered in the sections 2, 2a, to 2g. Also, the detailed steps for creating AWS CodePipeline for option #2 is covered in the sections 3, 3a to 3h.
+there are couple of options available. The option #1 is to leverage Visual Studio 2019. The option #2 is to leverage AWS Lambda Dotnet CLI. 
+This repository will cover how to set up an automated AWS CodePipeline for both the options. The detailed steps for creating AWS CodePipeline for option #1 is covered in the sections 2, 2a, to 2g. Also, the detailed steps for creating AWS CodePipeline for option #2 is covered in the sections 3, 3a to 3h.
                   
 
 ## 2. AWS CodePipeline for Dotnet Lambda functions created using Visual Studio
@@ -24,7 +25,7 @@ If you have not configured connection for AWS Code Commit, you can set it up by 
 
 Click 'Create' under AWS CodeCommit provider.
 
-<p align="center">
+<p align="right">
 <img src="/images/pic11.JPG">
 </p>
 
@@ -32,20 +33,20 @@ Click 'Create' under AWS CodeCommit provider.
 Once the AWS CodeCommit repository is created successfully, you will get a message like "The repository was cloned successfully
 . Create a new project or solution in the repository." in the Team Explorer.
 
-<p align="center">
+<p align="right">
 <img src="/images/pic2.JPG">
 </p>
 
 
 Go ahead and create a Visual Studio Solution and Project of type AWS Lambda.
 
-<p align="center">
+<p align="right">
 <img src="/images/pic3.JPG">
 </p>
 
 Select 'Empty Function' for 'Select Blueprint'.
 
-<p align="center">
+<p align="right">
 <img src="/images/pic4.JPG">
 </p>
 
@@ -171,40 +172,40 @@ Proceed to define AWS CodePipeline for deploying Lambda functions.
 
 Name the Pipeline with any arbitrary name.
 
-<p align="center">
+<p align="right">
 <img src="/images/pic5.JPG">
 </p>
 
 Select 'AWS CodeCommit' as SourceProvider and also pick the right repository and branch.
 
-<p align="center">
+<p align="right">
 <img src="/images/pic6.JPG">
 </p>
 
 
 Select 'AWS CodeBuild' as Build provider.
 
-<p align="center">
+<p align="right">
 <img src="/images/pic7.JPG">
 </p>
 
 
 Proceed to create a new CodeBuild project. Name the project with any arbitrary name. For Environment select 'Managed Image' as Environment Image and 'Ubuntu' as operating system.
 
-<p align="center">
+<p align="right">
 <img src="/images/pic8.JPG">
 </p>
 
 
 Select 'aws/codebuild/standard:4.0' as Image and 'Always use the latest image for this runtime version' for Image version.
 
- <p align="center">
+ <p align="right">
 <img src="/images/pic9.JPG">
 </p>
 
 Now you can see the successful creation of AWS CodeBuild project.
 
-<p align="center">
+<p align="right">
 <img src="/images/pic10.JPG">
 </p>
 
@@ -212,7 +213,7 @@ Now you can see the successful creation of AWS CodeBuild project.
 
 Proceed to define these four environment variables Profile, Region,  and SecretAccessKey in the CodeBuild environment settings.
 
-<p align="center">
+<p align="right">
 <img src="/images/pic12.JPG">
 </p>
 
@@ -222,26 +223,26 @@ The Region and Profile can be configured as part of environment variables in Cod
 
 Navigate to AWS Secrets Manager --> Store a new secret --> Select other types of secrets (API Key).
 
-<p align="center">
+<p align="right">
 <img src="/images/pic18.JPG">
 </p>
 
 Configure  AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY and its associated values.
 
-<p align="center">
+<p align="right">
 <img src="/images/pic19.jpg">
 </p>
 
 
 Select 'DefaultEncryptionKey' for the encryption key. Click Next and name the 'Secret name' as CodeBuild.
 
-<p align="center">
+<p align="right">
 <img src="/images/pic20.JPG">
 </p>
 <p>
 
 Leave the rest of selections as default and finally proceed to store the secret.
-<p align="center">
+<p align="right">
 <img src="/images/pic21.JPG">
 </p>
 
@@ -250,7 +251,7 @@ Leave the rest of selections as default and finally proceed to store the secret.
 
 The CodeDeploy is an optional stage in the AWS CodePipeline. Skip this to complete the creation of the AWS CodePipeline.
 
-<p align="center">
+<p align="right">
 <img src="/images/pic11.JPG">
 </p>
 
@@ -269,14 +270,14 @@ The following things need to be ensured for the successful CodeBuild exectuion.
 Save the creation of AWS CodePipeline. Push the code changes of Lambda function from local repository to remote AWS CodeCommit repository.
 After few seconds, you should see the trigger of AWS CodeCommit stage and transition to AWS CodeBuild stage. Then AWS Code Pipeline should complete successfully after few minutes.
 
-<p align="center">
+<p align="right">
 <img src="/images/pic15.JPG">
 </p>
 
 
 You can also see the successful creation of AWS Lambda function from AWS Code Pipeline.
 
-<p align="center">
+<p align="right">
 <img src="/images/pic16.JPG">
 </p>
 
@@ -294,7 +295,7 @@ Here is the typical development environment that you will need.
 ## 3a. Create an AWS CodeCommit repository
 Create an AWS CodeCommit repositry in the console.
 
-<p align="center">
+<p align="right">
 <img src="/images/pic14.JPG">
 </p>
 
@@ -321,7 +322,7 @@ dotnet new -all
 You should see the following output and many more .NET core template types listed there.
 
 
-<p align="center">
+<p align="right">
 <img src="/images/pic13.JPG">
 </p>
 
@@ -425,14 +426,14 @@ Follow the checklist mentioned in section 2f for successful execution of Pipelin
 Save the creation of AWS CodePipeline. Push the code changes of Lambda function from local repository to remote AWS CodeCommit repository.
 After few seconds, you should see the trigger of AWS CodeCommit stage and transition to AWS CodeBuild stage. Then AWS Code Pipeline should complete successfully after few minutes.
 
-<p align="center">
+<p align="right">
 <img src="/images/pic15.JPG">
 </p>
 
 
 You can also see the successful creation of AWS Lambda function from AWS Code Pipeline.
 
-<p align="center">
+<p align="right">
 <img src="/images/pic17.JPG">
 </p>
 
