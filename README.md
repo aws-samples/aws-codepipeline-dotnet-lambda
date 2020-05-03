@@ -227,9 +227,12 @@ Navigate to AWS Secrets Manager --> Store a new secret --> Select other types of
 </p>
 
 Configure  AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY and its associated values.
+
 <p align="center">
 <img src="/images/pic19.JPG">
 </p>
+
+
 Select 'DefaultEncryptionKey' for the encryption key. 
 
 Click Next and name the 'Secret name' as CodeBuild.
@@ -238,7 +241,15 @@ Click Next and name the 'Secret name' as CodeBuild.
 <img src="/images/pic20.JPG">
 </p>
 
-Leave the rest of selections as default and finally proceed to 
+Leave the rest of selections as default and finally proceed to store the secret.
+
+
+
+<p align="center">
+<img src="/images/pic20.JPG">
+</p>
+
+
 
 The CodeDeploy is an optional stage in the AWS CodePipeline. Skip this to complete the creation of the AWS CodePipeline.
 
