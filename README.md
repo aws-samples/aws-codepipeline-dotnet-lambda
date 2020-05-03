@@ -4,19 +4,19 @@ As enterprises start to embrace serverless paradigm (AWS Lambda), there is an in
 
 
 When it comes to creating and deploying AWS Lambda functions in .NET core,
-there are couple of options available. The option #1 is to leverage Visual Studio 2017. The option #2 is to leverage AWS Lambda Dotnet CLI. This post will cover how to set up an automated AWS CodePipeline for both the options. The detailed steps for creating AWS CodePipeline for option #1 is covered in the sections 2, 2a, to 2g. Also, the detailed steps for creating AWS CodePipeline for option #2 is covered in the sections 3, 3a to 3h.
+there are couple of options available. The option #1 is to leverage Visual Studio 2019. Then, the  option #2 is to leverage AWS Lambda Dotnet CLI. This post will cover how to set up an automated AWS CodePipeline for both the options. The detailed steps for creating AWS CodePipeline for option #1 is covered in the sections 2, 2a, to 2g. Also, the detailed steps for creating AWS CodePipeline for option #2 is covered in the sections 3, 3a to 3h.
                   
 
 ## 2. AWS CodePipeline for Dotnet Lambda functions created using Visual Studio
 The following forms the pre-requisite in the windows environment.
 - Windows 10 with lates updates.
-- Visual Studio 2017 (or) 2019 with latest updates.
-- AWS toolkit for Visual Studio 2017.
-- Windows subsytem for Linux.
+- Visual Studio 2019 with latest updates.
+- AWS toolkit for Visual Studio
 
-## 2a. Create an AWS Lambda function in Visual Studio 2017
 
-Open Visual Studio 2017, View --> Team Explorer --> Manage Connections.
+## 2a. Create an AWS Lambda function in Visual Studio 2019
+
+Open Visual Studio 2019, View --> Team Explorer --> Manage Connections.
 
 You will see connections of various providers such as AWS Code Commit, Local Git repositories and other hosted providers etc.
 If you have not configured connection for AWS Code Commit, you can set it up by providing AWS Code Commit Git Https Credentials.
