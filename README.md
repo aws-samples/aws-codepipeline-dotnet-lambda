@@ -78,6 +78,7 @@ Open the default aws-lambda-tools-defaults.json created with Visual Studio Proje
 }
 
 ``` 
+
 Make two changes to aws-lambda-tools-defaults.json file. The first one is about the profile. In my local machine, it is pointing to the AWS profile 'sundarprofile' created in Visual Studio. So, change this to default profile. If your's has the 'default' as profile, leave it unchanged. For the second change, add an IAM role that needs to be assumed by Lambda function.
 
 The updated aws-lambda-tools-defaults.json should look like below.
