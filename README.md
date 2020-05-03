@@ -4,7 +4,7 @@ As enterprises start to embrace serverless paradigm (AWS Lambda), there is an in
 
 
 When it comes to creating and deploying AWS Lambda functions in .NET core,
-there are couple of options available. The option #1 is to leverage Visual Studio 2017. The option #2 is to leverage AWS Lambda Dotnet CLI. This post will cover how to set up an automated AWS CodePipeline for both the options. The detailed steps for creating AWS CodePipeline for option #1 is covered in the sections 2, 2a, 2b, 2c, 2d, 2e, 2f and 2g. Also, the detailed steps for creating AWS CodePipeline for option #2 is covered in the sections 3, 3a, 3b, 3c, 3d, 3e, 3f, 3g and 3h.
+there are couple of options available. The option #1 is to leverage Visual Studio 2017. The option #2 is to leverage AWS Lambda Dotnet CLI. This post will cover how to set up an automated AWS CodePipeline for both the options. The detailed steps for creating AWS CodePipeline for option #1 is covered in the sections 2, 2a, to 2g. Also, the detailed steps for creating AWS CodePipeline for option #2 is covered in the sections 3, 3a to 3h.
                   
 
 ## 2. AWS CodePipeline for Dotnet Lambda functions created using Visual Studio
