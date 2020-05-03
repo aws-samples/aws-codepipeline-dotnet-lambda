@@ -240,16 +240,15 @@ Click Next and name the 'Secret name' as CodeBuild.
 <p align="center">
 <img src="/images/pic20.JPG">
 </p>
+<p>
 
 Leave the rest of selections as default and finally proceed to store the secret.
-
-
-
 <p align="center">
 <img src="/images/pic21.JPG">
 </p>
 
 
+<p>
 
 The CodeDeploy is an optional stage in the AWS CodePipeline. Skip this to complete the creation of the AWS CodePipeline.
 
