@@ -191,7 +191,7 @@ Proceed to create a new CodeBuild project. Name the project with any arbitrary n
 </p>
 
 
-Select 'aws/codebuild/dot-net:core-2.1' as Runtime version and 'Always use the latest image for this runtime version' for Image version.
+Select 'aws/codebuild/standard:4.0' as Image and 'Always use the latest image for this runtime version' for Image version.
 
  <p align="center">
 <img src="/images/pic9.JPG">
