@@ -9,7 +9,7 @@ there are couple of options available. The option #1 is to leverage Visual Studi
 
 ## 2. AWS CodePipeline for Dotnet Lambda functions created using Visual Studio
 The following forms the pre-requisite in the windows environment.
-- Windows 10 with lates updates.
+- Windows 10 with latest updates.
 - Visual Studio 2019 with latest updates.
 - AWS toolkit for Visual Studio
 
@@ -110,7 +110,7 @@ The updated aws-lambda-tools-defaults.json should look like below.
 
 ## 2c. Add buildspec.yml
 
-Add buildspec.yml at the root of the AWS CodeCommit repository. I mean, add it to the root of the local CodeCommit repository. It should look like the following.
+Add buildspec.yml at the root of the AWS CodeCommit repository.  
 
 
 ``` .yml
@@ -147,6 +147,10 @@ phases:
       - dotnet tool update -g Amazon.Lambda.Tools
       - dotnet lambda deploy-function "Dotnetlambda4" --function-role "arn:aws:iam::yourawsaccountnumber:role/Sundarfulllambdarole" --region "us-east-1"
 ``` 
+
+The above buildspec.yml installs .NET Core 3.1, sets the path of Dotnet core on the build enviornment and refers the access keys from secret store. It then configures aws cli tool.
+Finally it installs Amazon Lambda Templates & Amazon Lambda Tools for Dotnet core and deploys the Lambda function dotnet lambda cli.
+
 
 ## 2d. Push to AWS CodeCommit repository
 
