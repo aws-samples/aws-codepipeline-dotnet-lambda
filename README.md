@@ -217,14 +217,35 @@ Proceed to define these four environment variables Profile, Region,  and SecretA
 </p>
 
 
+To configure AWS CLI on the CodeBuild environment the parameters such as Region, Profile, AccessKeyId and SecretAccessKey need to be configure.
+The Region and Profile can be configured as part of environment variables in CodeBuild. The AccessKeyId and SecretAccessKey needs to be configured in AWS SecretsManager.
 
-Setting these environment variables will assign the right aws profile for the CodeBuild environment. If you see above, the AccessKAccessKeyId and SecretAccessKey are configured as PlainText. I'm doing this for the simplicity of the demo. For production purposes, leverage parameter store and AWs Secrets.
+Navigate to AWS Secrets Manager --> Store a new secret --> Select other types of secrets (API Key).
+
+<p align="center">
+<img src="/images/pic18.JPG">
+</p>
+
+Configure  AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY and its associated values.
+<p align="center">
+<img src="/images/pic19.JPG">
+</p>
+Select 'DefaultEncryptionKey' for the encryption key. 
+
+Click Next and name the 'Secret name' as CodeBuild.
+
+<p align="center">
+<img src="/images/pic20.JPG">
+</p>
+
+Leave the rest of selections as default and finally proceed to 
 
 The CodeDeploy is an optional stage in the AWS CodePipeline. Skip this to complete the creation of the AWS CodePipeline.
 
 <p align="center">
 <img src="/images/pic11.JPG">
 </p>
+
 
 ## 2f. Configuration for successful CodePipeline
 
