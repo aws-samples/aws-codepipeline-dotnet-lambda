@@ -237,7 +237,7 @@ The Region and Profile can be configured as part of environment variables in Cod
 Navigate to AWS Secrets Manager --> Store a new secret --> Select other types of secrets (API Key).
 
 <p align="right">
-<img src="/images/pic18.JPG">
+<img src="/images/pic18.jpg">
 </p>
 
 <br>
