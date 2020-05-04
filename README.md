@@ -12,7 +12,9 @@ This repository will cover how to set up an automated AWS CodePipeline for both 
 The following forms the pre-requisite in the windows environment.
 - Windows 10 with latest updates.
 - Visual Studio 2019 with latest updates.
-- AWS toolkit for Visual Studio
+-  AWS toolkit for Visual Studio Version 1.17.0.0
+- .NET Core 3.1
+- .NET Core Global Tool Amazon.Lambda.Tools Version 4.0.0
 
 
 ## 2a. Create an AWS Lambda function in Visual Studio 2019
@@ -312,9 +314,9 @@ In this section, i'll cover how to setup an AWS CodePipeline for Lambda function
 
 Here is the typical development environment that you will need.
 - Mac OS lates version or Linux (supported distros for .NET core 3.1) with latest updates. 
-- .NET Core 3.1 or higher.
-- AWS CLI
 - AWS Dotnet Lambda CLI
+- .NET Core 3.1
+- .NET Core Global Tool Amazon.Lambda.Tools Version 4.0.0
 
 ## 3a. Create an AWS CodeCommit repository
 
